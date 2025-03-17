@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,20 +17,58 @@
 </head>
 <body>
 
-  Mortgage Calculator
-  Clear All
-
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
+  <main>
+    <section id="calculator">
+      <div>
+        <h1>Mortgage Calculator</h1>
+        <label for="reset">Clear All</label> 
+      </div>
+      
+      <form action="#">
+        <div>
+          <label for="">Mortgage Amount</label>
+          <span>
+            <label for="amount" class="info">£</label>
+            <input type="number" name="amount" id="amount">
+          </span>
+        </div>
+        <div>
+          <label for="">Mortgage Term</label>
+          <span>
+            <input type="number" name="term" id="term">
+            <label for="term" class="info">years</label>
+          </span>
+        </div>
+        <div>
+          <label for="">Interest Rate</label>
+          <span>
+            <input type="number" name="rate" id="rate">
+            <label for="rate" class="info">%</label>
+          </span>
+        </div>
+        <div>
+          <label for="">Mortgage Type</label>
+          <span>
+            <input type="radio" name="type" id="repayment" value="Repayment">
+            <label for="repayment">Repayment</label>
+          </span>
+          <span>
+            <input type="radio" name="type" id="interest" value="Interest Only">
+            <label for="interest">Interest Only</label>
+          </span>
+        </div>
+        <label for="submit"><img src="assets/images/icon-calculator.svg" alt="Icon calculator">Calculate Repayments</label>
+        <input type="submit" value="Calculate Repayments" id="submit" hidden>
+        <input type="reset" value="" id="reset" hidden>
+      </form>
+    </section>
+    <section id="results">
+      <img src="assets/images/illustration-empty.svg" alt="Illustration empty results">
+      <h2>Results shown here</h2>
+      <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+    </section>
+  </main>
+  
 
   <!-- Empty results start -->
 
@@ -57,5 +96,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  
+
+  <script src="js/script.js"></script>
 </body>
 </html>
