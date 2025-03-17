@@ -1,0 +1,79 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Uniforming document */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+   --lime: hsl(61, 70%, 52%);
+   --red: hsl(4, 69%, 50%);
+   --white: hsl(0, 0%, 100%);
+   --slate100: hsl(202, 86%, 94%);
+   --slate300: hsl(203, 41%, 72%);
+   --slate500: hsl(200, 26%, 54%);
+   --slate700: hsl(200, 24%, 40%);
+   --slate900: hsl(202, 55%, 16%);
+}
+
+*{
+   margin: 0;
+   font-family: "Plus Jakarta Sans", sans-serif;
+   transition: all 0.3s ease;
+}
+
+body{
+   background: var(--slate100);
+}
+
+a{
+   text-decoration: none;
+}
+
+h1{
+   color: var(--slate900);
+   font-weight: 700;
+   font-size: 26px;
+}
+
+h2{
+   color: var(--white);
+   font-weight: 700;
+   font-size: 24px;
+}
+
+p,
+input,
+label{
+   font-size: 16px;
+   font-weight: 500;
+}
+
+/* Main */
+
+main{
+   background: var(--white);
+   max-width: 1000px;
+   margin: 250px auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   border-radius: 30px;
+}
+
+/* Calculator */
+
+#calculator{
+   padding: 40px;
+}
+
+#sect-header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+label{
+   color: var(--slate700);
+}
