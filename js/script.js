@@ -1,21 +1,5 @@
-/*
-<h2>Your results</h2>
-<p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-<div>
-   <p>Your monthly repayments</p>
-   <p id="result-repayments">£1,797.74</p>
-   <hr>
-   <p>Total you'll repay over the term</p>
-   <p id="result-total">£539,322.94</p>
-</div>
-*/
-
-/*
-<p class="error-label">This field is required</p>
-*/
-
 // Function to display the results
-function displayResults(repayment, interest, monthlyRepayment){
+function displayResults(repayment, monthlyRepayment, interest, choice){
    const results = document.querySelector('#results')
    results.classList.add('completed')
    results.innerHTML=`
@@ -25,8 +9,8 @@ function displayResults(repayment, interest, monthlyRepayment){
       <p>Your monthly repayments</p>
       <p id="result-repayments">£${monthlyRepayment}</p>
       <hr>
-      <p>Total you'll repay over the term</p>
-      <p id="result-total">£${repayment}</p>
+      <p>${choice == 1 ? `Total you'll repay over the term` : `Total interest you'll repay over the term`}</p>
+      <p id="result-total">£${choice == 1 ? repayment : interest}</p>
    </div>
    `
 }
@@ -152,17 +136,12 @@ form.addEventListener('submit', (e) => {
    }
    
    const interetMensuel = (rate/100) / 12
-   console.log(interetMensuel)
    const nombreMensualite = term * 12
-   console.log(nombreMensualite)
    const mensualite = (amount * interetMensuel) / (1 - (1 + interetMensuel)**(-nombreMensualite))
-   console.log(mensualite)
    const total = (mensualite * nombreMensualite).toFixed(2)
-   console.log(total)
    const interetTotal = (total - amount).toFixed(2)
-   console.log(interetTotal)
 
-   displayResults(total, interetTotal, mensualite.toFixed(2))
+   displayResults(total, mensualite.toFixed(2), interetTotal, type)
 })
 
 // Form reset

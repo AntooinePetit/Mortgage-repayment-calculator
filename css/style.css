@@ -301,3 +301,63 @@ section{
       font-size: 24px;
    }
 }
+
+/* Responsive */
+
+@media screen and (max-width:1024px) {
+   main{
+      height: 100%;
+   }
+   .completed div{
+      max-width: 83%;
+   }
+}
+
+@media screen and (max-width:767px) {
+   main{
+      padding: 0;
+   }
+   section{
+      border-radius: 0;
+      grid-template-columns: 1fr;
+
+      article{
+         padding: 10px;
+      }
+   }
+   #calculator{
+      #sect-header{
+         display: block;
+      }
+      form{
+         grid-template-columns: 1fr;
+
+         div:nth-child(1),
+         div:nth-child(4),
+         #submit-button{
+            grid-column: 1;
+         }
+
+         div {
+            span {
+               label{
+                  padding: 11px 15px;
+               }
+            }
+         }
+
+      }
+
+   }
+   #results{
+      border-radius: 0;
+   }
+   .completed{
+      div{
+         padding: 15px;
+         max-width: none;
+         width: auto;
+         justify-self: center;
+      }
+   }
+}
