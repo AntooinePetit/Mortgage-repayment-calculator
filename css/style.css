@@ -232,11 +232,11 @@ section{
          color: var(--white)!important;
       }
    }
-   .error-label{
-      font-size: 14px;
-      color: var(--red);
-      margin: 0;
-   }
+}
+.error-label{
+   font-size: 14px;
+   color: var(--red);
+   margin: 0;
 }
 
 .active-radio{

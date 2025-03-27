@@ -23,35 +23,34 @@
         </div>
         
         <form action="#">
-          <div class="error-input">
+          <div id="div-amount">
             <label for="amount">Mortgage Amount</label>
             <span>
               <label for="amount" class="info">£</label>
               <input type="number" name="amount" id="amount">
             </span>
-            <p class="error-label">This field is required</p>
           </div>
-          <div>
+          <div id="div-term">
             <label for="term">Mortgage Term</label>
             <span>
               <input type="number" name="term" id="term">
               <label for="term" class="info">years</label>
             </span>
           </div>
-          <div>
+          <div id="div-rate">
             <label for="rate">Interest Rate</label>
             <span>
-              <input type="number" name="rate" id="rate">
+              <input type="number" name="rate" id="rate" step="0.01">
               <label for="rate" class="info">%</label>
             </span>
           </div>
-          <div>
+          <div id="div-type">
             <label>Mortgage Type</label>
-            <span class="active-radio">
+            <span id="span-repayment">
               <input type="radio" name="type" id="repayment" value="Repayment">
               <label for="repayment">Repayment</label>
             </span>
-            <span>
+            <span id="span-interest">
               <input type="radio" name="type" id="interest" value="Interest Only">
               <label for="interest">Interest Only</label>
             </span>
@@ -61,24 +60,10 @@
           <input type="reset" value="" id="reset" hidden>
         </form>
       </article>
-      <article id="results" class="completed">
-        <h2>Your results</h2>
-        <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-        <div>
-          <p>Your monthly repayments</p>
-          <p id="result-repayments">£1,797.74</p>
-          <hr>
-          <p>Total you'll repay over the term</p>
-          <p id="result-total">£539,322.94</p>
-        </div>
-
-
-
-
-        
-        <!-- <img src="assets/images/illustration-empty.svg" alt="Illustration empty results">
+      <article id="results">        
+        <img src="assets/images/illustration-empty.svg" alt="Illustration empty results">
         <h2>Results shown here</h2>
-        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p> -->
+        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
       </article>
     </section>
   </main>  
