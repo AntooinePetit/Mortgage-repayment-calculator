@@ -61,7 +61,7 @@ label{
 
 main{
    display: flex;
-   height: 100vh;
+   height: 98vh;
    flex-direction: column;
    padding: 0 15px;
 }
